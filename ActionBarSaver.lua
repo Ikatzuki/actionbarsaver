@@ -85,7 +85,7 @@ function ABS:SaveProfile(name)
 				set[actionID] = string.format("%s|%d|%s|%s", type, id, "", (GetItemInfo(id)) or "")
 			-- Save a spell
 			elseif( type == "spell" and id > 0 ) then
-			    local spellName, spellStance = GetSpellInfo(id)
+			    local spellName, spellStance = GetSpellSubtext(id)
 				if( spellName or spellStance ) then
 					set[actionID] = string.format("%s|%d|%s|%s|%s|%s", type, id, "", spellName, spellStance or "", extraID or "")
 				end
